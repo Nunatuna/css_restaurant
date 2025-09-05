@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="js/form.js" defer></script>
+    <title>Contact | CSS Restaurant</title>
+</head>
+<body>
+
+    <header>
+        <h1>Restaurant EK</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="menu.html" title="Menu">Menu</a></li>
+                <li><a class="active" href="contact.html" title="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <article>
+                <img src="img/map.jpg" alt="">
+            </article>
+        </section>
+
+        <section>            
+            <article>
+                <address>
+                    <p>Guldbergsgade 29N</p>
+                    <p>2200 Copenhagen</p>
+                    <p>Phone no.: <a href="tel:(+45) 20 82 53 70" title="Give us a call!">20 82 53 70</a></p>
+                    <p>E-mail: <a href="mailto:info@restaurantek.dk">info@restaurantek.dk</a></p>
+                </address>
+            </article>
+        
+            <article>
+                <form id="formContact">
+                    <p>Contact form</p>
+
+                    <div>
+                        <label for="txtFullName">Full name</label>
+                        <input type="text" id="txtFullName" required>
+                    </div>
+
+                    <div>
+                        <label for="txtPhoneNumber">Phone no.</label>
+                        <input type="tel" id="txtPhoneNumber">
+                    </div>
+                    <div>
+                        <label for="txtEmail">E-mail</label>
+                        <input type="email" id="txtEmail" required>
+                    </div>
+                    <div>
+                        <label for="txtPersons">Persons</label>
+                        <input type="number" id="txtPersons" required>
+                    </div>
+                    <div>
+                        <label for="dataDateAndTime">Date and time</label>
+                        <input type="datetime-local" id="dataDateAndTime" required>
+                    </div>
+                    <div>
+                        <label for="txtInformation">Further information</label>
+                        <textarea id="txtInformation"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Send</button>
+                    </div>
+
+                </form>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2021-2025 EK Development</p>
+    </footer>
+
+     <dialog id="modalContact">
+        <header>
+            <h1>Message received</h1>
+            <button class="close">&times;</button>
+        </header>
+        <p>Thank you for your message!</p>
+        <p>Full name: <span id="form-full-name"></span></p>
+        <p>Phone number: <span id="form-phone-number"></span></p>
+        <p>E-mail: <span id="form-email"></span></p>
+        <p>Persons: <span id="form-persons"></span></p>
+        <p>Date: <span id="form-date"></span></p>
+        <p>Information: <span id="form-information"></span></p>
+    </dialog>
+    
+</body>
+</html>

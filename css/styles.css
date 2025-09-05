@@ -1,0 +1,91 @@
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--fontColor);
+    font-family: var(--mainFont);
+}
+
+header {
+   background-color: var(--headerColor);
+
+    > h1 {
+        color: var(--headerTextColor);
+        padding: 1rem 2rem;
+    }
+
+    > nav {
+        background-color: var(--navColor);
+        padding: 1rem;
+
+        > ul {
+            list-style-type: none;
+
+            > li {
+                display: flex;
+                justify-content: center;
+                padding: 0.5rem;
+            }
+
+            > li:nth-of-type(2), li:nth-of-type(3) {
+                border-top: 0.1rem solid var(--headerTextColor);
+                width: 100%;
+            }
+
+            > li a {
+                text-decoration: none;
+                color: var(--headerTextColor);
+                font-weight: 700;
+            }
+
+            .active {
+                color: var(--activeColor);
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--navColor);
+    color: var(--headerTextColor);
+    padding: 0.5rem;
+}
+
+/* Tablet size */
+@media screen and (min-width: 700px) {
+    header {
+        > nav {
+            > ul {
+                display: flex;
+                padding: 0rem 1rem;
+                gap: 2rem;
+                align-items: end;
+
+                > li {
+                    padding: 0rem;
+                }
+    
+                > li:nth-of-type(2), li:nth-of-type(3) {
+                    border-top: none;
+                    width: fit-content;
+                }
+            }
+        }
+    }
+}
+
+/* Desktop size */
+@media screen and (min-width: 1000px) {
+    main {
+        margin: 1rem 13%;
+    }
+}
